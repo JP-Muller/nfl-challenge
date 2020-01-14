@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# nfl-coding-exercise
 
-## Available Scripts
+This exercise should hopefully be enjoyable and will certainly allow you to apply some very popular frameworks used in practice. You can use any modern JS framework that you would like (Angular/Vue/React/etc). Some helpful resources are included here
 
-In the project directory, you can run:
+* Angular: https://angular.io
+* React: https://reactjs.org/
+* Vue: https://vuejs.org/
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Expected output
+* A commit into this repository including the associated HTML, CSS, and JavaScript artifacts.
+* An email informing us that you are completed with details of your design decisions and any other necessary information we may need (any setup that might be necessary to run the site or if it can just run in any web server normally)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# Requirements  
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Require the user to login (login form that accepts username and password, but accepts any non-null (not blank) values).
+* Upon logging in the user should be prompted to select the winners for a week’s NFL games.  [NFL 2018 Season Week 1](http://www.espn.com/nfl/schedule/_/week/1/seasontype/2)
+* Upon selecting a winner the look and feel of the predicted winner and predicted loser should change in some fashion (for ex: fade, different background).
+* The user should be able to filter (hide/show) the list of games by at least one attribute (division, conference, day/time of game, etc.).
+* The display should include the following information for each game: 
+  * Home Team
+  * Away Team
+  * Location / Stadium Name
+  * Game Date
+  * Game Time
+  * Extra Credit - Weather (this should come from a public/external API, there all lots of APIs available, [click here for one](http://openweathermap.org/api), just display the current weather).
+* Note: While no server back-end is required for pulling the list of games, the implementation should not statically display the list of games.  The list of games should be defined in a “constant” JavaScript (JSON) object that is loaded at runtime and then dynamically displayed in the user interface using HTML and your JS framework of choice.  Do not hesitate to call / email if you have questions about this detail (585.347.####).
+* No page refreshes or modals (dialogues).

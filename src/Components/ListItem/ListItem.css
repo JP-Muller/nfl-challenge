@@ -1,0 +1,255 @@
+.item-master {
+  display: grid;
+  grid-template-columns: 40% 35% 25%;
+  width: 80vw;
+  height: 18vh;
+  animation: fadein 1s;
+  margin-bottom: 5px;
+  user-select: none;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  /* transition: box-shadow 83ms; */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.first-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-right: 1px solid #f1f1f1;
+}
+
+.team-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  grid-column: 1/2;
+}
+
+.selected-winner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadein 2s;
+  font-size: 14px;
+}
+
+.selected-winner b {
+  margin-left: 5px;
+}
+
+.team-section h5 {
+  align-self: center;
+}
+
+.item-mid-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid #f1f1f1;
+  grid-column: 2/3;
+}
+
+.game-info-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.game-info-text p {
+  margin-left: 5px;
+}
+
+.weather-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: 3/4;
+}
+
+.weather-section p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.weather-section i {
+  align-self: auto;
+  font-size: 24px;
+  margin-right: 5px;
+  color: #5c5656;
+}
+
+#icon-and-temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-team-container,
+.away-team-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 13px;
+  width: 42%;
+}
+
+.home-team-container:hover,
+.away-team-container:hover {
+  transform: scale(1.06);
+  cursor: pointer;
+}
+
+.home-team-container i {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 10%;
+  font-size: 12px;
+  color: #5c5656;
+}
+
+.home-team-container img,
+.away-team-container img {
+  align-self: center;
+  height: 35px;
+  width: 35px;
+}
+
+.selected {
+  transform: scale(1.06);
+  border: 2px solid rgb(73, 231, 25);
+}
+
+.expected-loser {
+  opacity: 0.4;
+}
+
+@media (max-width: 990px) {
+  .item-master {
+    width: 90vw;
+  }
+  .item-mid-section b {
+    font-size: 10px;
+  }
+  .item-mid-section p {
+    font-size: 10px;
+  }
+  .selected-winner {
+    font-size: 0.8em !important;
+  }
+  .selected {
+    border: 2px solid rgb(73, 231, 25) !important;
+  }
+
+  #icon-and-temp {
+    font-size: 15px;
+  }
+
+  .weather-section p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .weather-section i {
+    align-self: auto;
+    font-size: 20px;
+    margin-right: 5px;
+    color: #5c5656;
+  }
+}
+
+@media (max-width: 570px) {
+  .team-section h5 {
+    font-size: 8px;
+  }
+  .item-master {
+    width: 95vw;
+  }
+  .item-mid-section p {
+    font-size: 8px;
+  }
+  .selected-winner {
+    flex-direction: column;
+  }
+
+  .home-team-container,
+  .away-team-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #f1f1f1;
+    text-align: center;
+    padding: 5px;
+    width: 40%;
+  }
+
+  .home-team-container img,
+  .away-team-container img {
+    align-self: center;
+    height: 15px;
+    width: 15px;
+  }
+
+  .home-team-container p,
+  .away-team-container p {
+    font-size: 7px;
+  }
+
+  .home-team-container i {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 5%;
+    font-size: 6px;
+    color: #5c5656;
+  }
+
+  .selected-winner {
+    font-size: 8px !important;
+  }
+  .game-info-text {
+    flex-direction: column;
+  }
+  .game-info-text p,
+  .game-info-text b {
+    font-size: 7px;
+  }
+  #icon-and-temp {
+    font-size: 8px;
+  }
+
+  .weather-section p {
+    margin-top: 10px;
+    font-size: 8px;
+  }
+
+  .weather-section i {
+    align-self: auto;
+    font-size: 15px;
+    margin-right: 5px;
+    color: #5c5656;
+  }
+
+  .weather-section {
+    font-size: 10px;
+  }
+}

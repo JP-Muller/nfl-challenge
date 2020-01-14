@@ -1,0 +1,81 @@
+#navbar-master {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  background-color: rgb(83, 170, 199);
+  color: #fff;
+  box-shadow: 0px 0.8px grey;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#nav-title {
+  display: flex;
+  width: 30%;
+  user-select: none;
+}
+
+#nfl-logo {
+  height: 25px;
+  width: 25px;
+  margin: 0 5px;
+}
+
+#info-and-logout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90%;
+}
+
+#user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 15px;
+  user-select: none;
+}
+
+#user-info img {
+  height: 30px;
+  width: 30px;
+  border: 2px solid rgb(73, 231, 25);
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+#info-and-logout a {
+  align-self: flex-end;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+@media (max-width: 420px) {
+  #nav-title {
+    font-size: 10px;
+    width: 40%;
+  }
+
+  #nfl-logo {
+    height: 20px;
+    width: 20px;
+  }
+
+  #user-info {
+    font-size: 8px;
+  }
+
+  #user-info img {
+    height: 15px;
+    width: 15px;
+    border: 1px solid rgb(73, 231, 25);
+  }
+
+  #info-and-logout a {
+    align-self: flex-end;
+    font-size: 7px;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,75 @@
+.parent-container{
+    width: 60vw;
+    height: 50vh;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    animation: fadein 1s;
+}
+
+form {
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+}
+
+.input-container {
+  padding: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.login-button {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.field-icon{
+    float: right;
+    margin-left: -25px;
+    margin-top: 20px;
+    margin-right: 7px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.field-icon2{
+    float: right;
+    margin-left: -25px;
+    margin-top: 20px;
+    margin-right: 5px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
