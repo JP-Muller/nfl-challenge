@@ -4,17 +4,17 @@ import {login} from '../../Redux/Reducers/userReducer'
 import {Redirect} from 'react-router-dom'
 import "./Auth.css";
 
-function Login(props) {
+export function Login(props) {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
 
   let {user} = props
 
-  function loginUser(e) {
+function loginUser(e) {
       props.login(username, password)
       e.preventDefault()
   }
-  if(user.loggedIn) return <Redirect to='/' />;
+  if(user && user.loggedIn) return <Redirect to='/' />;
   return (
     <div className="parent-container">
       <form>
