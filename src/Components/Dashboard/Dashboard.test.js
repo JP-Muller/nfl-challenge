@@ -1,12 +1,12 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { shallow, mount } from "enzyme";
-import ConnectedDashboard, { Dashboard } from "./Dashboard";
-import { store } from "../../Redux/store";
+import { Dashboard } from "./Dashboard";
+import { testStore } from "../../../Utility/index";
 
 const user = {
   user: {
-      loggedIn: true
+    loggedIn: true
   }
 };
 
@@ -16,20 +16,28 @@ const games = {
   loading: false
 };
 
-const setUp = (props = {}) => {
-    const component = mount(<Dashboard user={user} games={games}/>, { context: { store } });
-    return component;
-  };
+const setUp = (initialState = {}) => {
+  const store = testStore(initialState);
+  const wrapper = shallow(
+    <Dashboard store={store} user={user} games={games} />
+  );
+  return wrapper;
+};
 
 describe("Dashboard Component", () => {
-    let component;
+  let wrapper;
+  const initialState = {
+    user: {},
+  };
+  wrapper = setUp(initialState);
+
   it("Should render Dashboard component without errors", () => {
-    shallow(<Dashboard user={user} games={games} />, { context: { store } });
+    setUp();
   });
 
   it("Should receive current game days", () => {
-        component = setUp()
-        // expect(component.state('currentGameDays').length > 5).toBe(true)
-        // console.log(component.state('currentGameDays'))
+    // component = setUp()
+    // expect(component.state('currentGameDays').length > 5).toBe(true)
+    // console.log(component.state('currentGameDays'))
   });
 });
